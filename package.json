@@ -1,0 +1,22 @@
+{
+  "name": "tabernacle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wozma/tabernacle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wozma/tabernacle/issues"
+  },
+  "homepage": "https://github.com/Wozma/tabernacle#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
