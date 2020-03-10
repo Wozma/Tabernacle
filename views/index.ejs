@@ -1,29 +1,21 @@
 <!-- views/pages/index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabernacle</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <header>
         <%- include('components/navbar.ejs'); %>
     </header>
-
 <body> 
     <h1>TABERNACLE</h1>
-
     <p>Bienvenue sur notre quizz Tabernacle !</p>
     <p>Avec ce QCM, nous allons tester tes connaissances cinématographiques et languistiques, j'espère que tu seras à la hauteur !</p>
     <p>Pour résumer, tu auras un titre de film en français, et 5 propositions en dessous. L'une d'elle est traduuite par les québecois, à toi de deviner laquelle !</p>
-
-    <!-- <p><%= %></p> -->
-
+<p><%= prenom %></p>
     <button>Jouer</button>
-
-    
 </body>
-
 </html>
