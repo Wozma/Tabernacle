@@ -8,6 +8,7 @@ const axios = require('axios');
 
 const URL_API = "https://api.themoviedb.org/3/movie/76341?api_key=d81f509ee99573f10007ecc04<7db542c";
 
+app.set('view engine', 'ejs');
 
 
 const hostname = '127.0.0.1';
