@@ -6,8 +6,7 @@ const figlet = require('figlet');
 const axios = require('axios');
 
 
-const URL_API = "https://api.themoviedb.org/3/movie/76341?api_key=d81f509ee99573f10007ecc04<7db542c";
-console.log(URL_API)
+const URL_API = "https://api.themoviedb.org/76341?api_key=d81f509ee99573f10007ecc04<7db542c";
 
 app.set('view engine', 'ejs');
 
@@ -16,6 +15,11 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render("accueil"), [URL_API];
 });
+
+app.get('index', (req, res) => {
+    res.render("index");
+});
+
 
 app.get('/', function (req, res) {
     axios.get(URL_API)
