@@ -21,6 +21,8 @@
     "express": "^4.17.1",
     "figlet": "^1.3.0",
     "internal-ip": "^5.0.0",
+    "materialize": "^1.0.0",
+    "node-quizzer": "^2.0.4",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {},
