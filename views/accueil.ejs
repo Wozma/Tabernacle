@@ -13,6 +13,8 @@
 
 <body>
   <%= film.title %>
+  <%- include("components/header.ejs") %>
+
 
   <h1>TABERNACLE</h1>
   <h2>Le quizz des héros</h2>
@@ -22,8 +24,7 @@
   <p>Avec ce QCM, nous allons tester tes connaissances cinématographiques et languistiques, j'espère que tu seras à la
     hauteur !</p>
   <p>Pour résumer, apparaîtront un titre de film en français, et 5 propositions en dessous. L'une d'elle est traduite
-    par les québecois, il faut deviner devin
-    er laquelle !</p>
+    par les québecois, à vous de deviner laquelle !</p>
 
 
   <div class="jouer" href="javascript:void(0);" onclick="window.location.href='/index'"><a>Lancer le quiz !</a></div>

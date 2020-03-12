@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
+
+    <%- include("components/header.ejs") %>
+
     <div id="container">
-        <div id="start">Start Quiz!</div>
+        <div id="start">Start the   Tabernacle Quiz</div>
         <div id="quiz" style="display: none">
             <div id="question"></div>
             <div id="qImg"></div>
@@ -26,6 +29,9 @@
         </div>
         <div id="scoreContainer" style="display: none"></div>
     </div>
+
+    <%- include("components/footer.ejs") %>
+
 
     
     <script src="javascript/quiz.js"></script>
