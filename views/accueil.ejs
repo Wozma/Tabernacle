@@ -16,35 +16,22 @@
 
   <h1>TABERNACLE</h1>
   <h2>Le quizz des héros</h2>
+  
+  
   <p>Bienvenue sur notre quizz Tabernacle !</p>
   <p>Avec ce QCM, nous allons tester tes connaissances cinématographiques et languistiques, j'espère que tu seras à la
     hauteur !</p>
   <p>Pour résumer, apparaîtront un titre de film en français, et 5 propositions en dessous. L'une d'elle est traduite
-    par les québecois, il faut deviner deviner laquelle !</p>
+    par les québecois, il faut deviner devin
+    er laquelle !</p>
 
 
   <div class="jouer" href="javascript:void(0);" onclick="window.location.href='/index'"><a>Lancer le quiz !</a></div>
 
 
-  <!-- The core Firebase JS SDK is always required and must be listed first 
- -->
-  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
 
   <script src="javascript/script.js"></script>
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyAUUIQDPQFnNLFY1Mmp-7x4yZLwD7vE5ko",
-      authDomain: "tabernacledb.firebaseapp.com",
-      databaseURL: "https://tabernacledb.firebaseio.com",
-      projectId: "tabernacledb",
-      storageBucket: "tabernacledb.appspot.com",
-      messagingSenderId: "385139316104",
-      appId: "1:385139316104:web:d8b28eee314219fe8bd63d"
-    };
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
-
+  
   <%- include("components/footer.ejs") %>
 
 </body>

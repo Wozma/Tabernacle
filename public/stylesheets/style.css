@@ -158,12 +158,11 @@ h1 {
   h2 {
     text-shadow: 0 2px 0 #00ECFF, 0 -2px 0 #FF4045;
     position: relative;
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Roboto', sans-serif;
-    top: -80px;
-    margin-bottom: -20px;
     text-align: center;
-  }
+    margin-bottom: 50px;
+ }
 
   p {
     text-align: center;
@@ -179,15 +178,26 @@ h1 {
     font-size: 30px;
     margin-top: 100px;
     background-color: rgb(182, 182, 182);
-    width: 11vw;
-    height: 40px;
+    width: 18vw;
+    height: 50px;
     border-radius: 10px;
     text-align: center;
   }
 
+  footer {
+      position: absolute;
+      bottom: 0px;
+      text-align: center;
+      background-color: rgb(0, 12, 24);
+      height: 40px;
+      width: 100%;
+      color: white;
+      font-size: 18px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+  }
 
-
+   
 
 
 
