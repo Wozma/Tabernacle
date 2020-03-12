@@ -147,47 +147,43 @@ body{
     text-align: center;
 }
 
-h1{
+
+h1 {
     color: rgb(151, 23, 23);
     font-size: 100px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-}
-h2{
-    text-shadow:0 4px 0 #00ECFF, 0 -4px 0 #FF4045;
+  }
+
+  h2 {
+    text-shadow: 0 2px 0 #00ECFF, 0 -2px 0 #FF4045;
     position: relative;
     font-size: 60px;
+    font-family: 'Roboto', sans-serif;
     top: -80px;
     margin-bottom: -20px;
     text-align: center;
-}
-p{
+  }
+
+  p {
     text-align: center;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-}
+    color: rgb(15, 15, 15);
+  }
 
 
-button.jouer{
+  .jouer {
     display: block;
     margin: auto;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 100px;
-    color: white;
-    background-color: blue;
-    border-color: white;
-    border-width: 2px;
-    border-radius: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-
-
-
+    background-color: rgb(182, 182, 182);
+    width: 11vw;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+  }
 
 
 
