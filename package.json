@@ -23,6 +23,7 @@
     "firebase": "^7.10.0",
     "internal-ip": "^5.0.0",
     "materialize": "^1.0.0",
+    "moviedb": "^0.2.10",
     "node-quizzer": "^2.0.4",
     "nodemon": "^2.0.2"
   },

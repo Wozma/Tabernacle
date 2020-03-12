@@ -5,27 +5,28 @@ const internalIp = require('internal-ip');
 const figlet = require('figlet');
 const axios = require('axios');
 // must be listed before other Firebase SDKs
-var firebase = require("firebase/app");
+const firebase = require("firebase/app");
+const MovieDB = require('moviedb')('d81f509ee99573f10007ecc04<7db542c');
 
 // Add the Firebase products that you want to use
 require("firebase/auth");
 require("firebase/firestore");
 
 
-const URL_API = "https://api.themoviedb.org/76341?api_key=d81f509ee99573f10007ecc04<7db542c";
-
 app.set('view engine', 'ejs');
 
+MovieDB.searchMovie({ query: 'Alien' }, (err, res) => {
+    console.log(res);
+  });
 
 
 app.get('/', (req, res) => {
-    res.render("accueil"), [{URL_API}];
+    res.render("accueil");
 });
 
-app.get('index', (req, res) => {
+app.get('/index', (req, res, next) => {
     res.render("index");
 });
-
 
 app.get('/', function (req, res) {
     axios.get(URL_API)
