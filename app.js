@@ -7,6 +7,7 @@ const figlet = require('figlet');
 const axios = require('axios');
 const API_KEY_TMDB = "d81f509ee99573f10007ecc047db542c"
 
+<<<<<<< HEAD
 require("firebase/auth");
 require("firebase/firestore");
 
@@ -23,6 +24,8 @@ const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 
+=======
+>>>>>>> d62b5a94078cdf5ef3cff2024c7ec8852014e952
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -102,6 +105,9 @@ var selectFilmsID = [
 
 let film =""
 
+let filmUn = selectFilmsID[randomNumber]
+let filmDeux = selectFilmsID[randomNumber]
+
 app.get('/', (req, res) => {
     res.render("accueil", { film: film });
 });
@@ -120,6 +126,18 @@ axios.get(`https://api.themoviedb.org/3/movie/${selectRandomFilm}?api_key=${API_
     res.render("index", { film: film, question : question });
 })
 });
+
+app.get(('/', (req, res) => {
+    var randhome =  [filmUn, filmDeux, selectRandomFilm]
+    shuffle (randhome);
+    console.log(randhome)
+
+    axios.get(`https://api.themoviedb.org/3/movie/${selectRandomFilm}?api_key=${API_KEY_TMDB}&language=fr-CA`)
+    .then(response => {
+        answer = response.data
+        res.render("index", { answer: answer });
+    })
+}))
 
 
 // créer les questions
