@@ -7,10 +7,6 @@ const axios = require('axios');
 const API_KEY_TMDB = "d81f509ee99573f10007ecc047db542c"
 
 
-require("firebase/auth");
-require("firebase/firestore");
-
-
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
@@ -87,6 +83,9 @@ var selectFilmsID = [
 
 let film = ''
 
+let filmUn = selectFilmsID[randomNumber]
+let filmDeux = selectFilmsID[randomNumber]
+
 app.get('/', (req, res) => {
     let randomNumber = Math.floor(Math.floor(Math.random() * selectFilmsID.length))
     let selectRandomFilm = selectFilmsID[randomNumber]
@@ -101,6 +100,18 @@ app.get('/', (req, res) => {
 app.get('/index', (req, res) => {
     res.render("index", { film: film });
 });
+
+app.get(('/', (req, res) => {
+    var randhome =  [filmUn, filmDeux, selectRandomFilm]
+    shuffle (randhome);
+    console.log(randhome)
+
+    axios.get(`https://api.themoviedb.org/3/movie/${selectRandomFilm}?api_key=${API_KEY_TMDB}&language=fr-CA`)
+    .then(response => {
+        answer = response.data
+        res.render("index", { answer: answer });
+    })
+}))
 
 
 app.listen(8080);   
