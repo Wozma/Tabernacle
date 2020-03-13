@@ -85,7 +85,7 @@ var selectFilmsID = [
     "861",
 ]
 
-
+let film = ''
 
 app.get('/', (req, res) => {
     let randomNumber = Math.floor(Math.floor(Math.random() * selectFilmsID.length))
@@ -93,13 +93,13 @@ app.get('/', (req, res) => {
 
     axios.get(`https://api.themoviedb.org/3/movie/${selectRandomFilm}?api_key=${API_KEY_TMDB}&language=fr`)
         .then(response => {
-            let film = response.data
+            film = response.data
             res.render("accueil", { film: film });
         })
 });
 
-app.get('/index', (req, res, next) => {
-    res.render("index");
+app.get('/index', (req, res) => {
+    res.render("index", { film: film });
 });
 
 

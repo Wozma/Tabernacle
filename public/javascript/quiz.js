@@ -15,7 +15,7 @@ const scoreDiv = document.getElementById("scoreContainer");
 const API_KEY_TMDB = "d81f509ee99573f10007ecc047db542c"
 
 
-var selectFilmsID = [
+/* var selectFilmsID = [
     "584",
     "9433",
     "73",
@@ -81,6 +81,8 @@ var selectFilmsID = [
     "861",
 ]
 
+let film =""
+
 app.get('/', (req, res) => {
 let randomNumber = Math.floor(Math.floor(Math.random() * selectFilmsID.length))
 let selectRandomFilm = selectFilmsID[randomNumber]
@@ -91,10 +93,10 @@ console.log(question)
 
 axios.get(`https://api.themoviedb.org/3/movie/${selectRandomFilm}?api_key=${API_KEY_TMDB}&language=fr`)
 .then(response => {
-    let film = response.data
+    film = response.data
     res.render("accueil", { film: film, question : question });
 })
-});
+}); */
 
 // create our questions
 let questions = [
@@ -114,6 +116,7 @@ let questions = [
         correct : ""
     },{
         question : "",
+        imgSrc : "",
         choiceA : "",
         choiceB : "",
         choiceC : "",
