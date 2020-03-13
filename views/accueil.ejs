@@ -13,14 +13,14 @@
 
 <body>
 
-  <%= film.title %>
-  <%- include("components/header.ejs") %>
+  <%= film.title %>   <!-- tester si on reçoit le film  -->
+  <%- include("components/header.ejs") %>  <!--  on appelle le header -->
 
 
   <h1>TABERNACLE</h1>
   <h2>Le quizz des héros</h2>
   
-  
+
   
   <p>Bienvenue sur notre quizz Tabernacle !</p>
   <p>Avec ce QCM, nous allons tester tes connaissances cinématographiques et languistiques, j'espère que tu seras à la
@@ -29,12 +29,15 @@
     par les québecois, à vous de deviner laquelle !</p>
 
 
-  <div class="jouer" href="javascript:void(0);" onclick="window.location.href='index'"><a>Lancer le quiz !</a></div>
 
+<!--    bouton de lancement du quiz
+ -->  <div class="jouer" href="javascript:void(0);" onclick="window.location.href='index'"><a>Lancer le quiz !</a></div>
 
-  <script src="javascript/script.js"></script>
+<!--      on appelle les scripts --> 
+ <script src="javascript/script.js"></script>
   
-  <%- include("components/footer.ejs") %>
+<!--    on appelle le footer --> 
+ <%- include("components/footer.ejs") %>
 
   <script src="../app.js"></script>
 </body>
