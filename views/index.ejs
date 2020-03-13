@@ -13,32 +13,28 @@
     <div id="container">
         <div id="start">Start the   Tabernacle Quiz</div>
         <div id="quiz" style="display: none">
+            // on fait apparaitre un film au hasard comme question
             <div id="question"> <%= film.title %>  </div>
             <div id="qImg"></div>
-            <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"> 
-                </div>
+            <div id="choices"> // les différents choix possibles
+                <div class="choice" id="A" onclick="checkAnswer('A')"> <%= question.title %> </div>
                 <div class="choice" id="B" onclick="checkAnswer('B')"></div>
                 <div class="choice" id="C" onclick="checkAnswer('C')"></div>
             </div>
-            <div id="timer">
+            <div id="timer"> // le chrono
                 <div id="counter"></div>
                 <div id="btimeGauge"></div>
                 <div id="timeGauge"></div>
             </div>
-            <div id="progress"></div>
+            <div id="progress"></div> // la barre de progression
         </div>
-        <div id="scoreContainer" style="display: none"></div>
+        <div id="scoreContainer" style="display: none"></div> // l'affichage du score
     </div>
 
     <%- include("components/footer.ejs") %>
 
-
-    
-    <!-- <script src="javascript/quiz.js"></script> -->
-
+    <script src="../app.js"></script>
     <script src="javascript/script.js"></script>
-
 
 </body>
 </html>
